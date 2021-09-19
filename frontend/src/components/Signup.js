@@ -30,7 +30,7 @@ function Signup() {
 
     try {
       await axios.post(API_URL + "api/auth/signup", data, config);
-      history.push("/signin");
+      history.push("/survey");
     } catch (err) {
       console.log(err);
       setError("Username Already Exist")

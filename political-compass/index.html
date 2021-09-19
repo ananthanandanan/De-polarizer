@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Political Compass</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png" />
+  <link rel="manifest" href="favicons/manifest.json" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#ffffff" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+  <link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+
+    <div class="content">
+      <div class="input">
+        <div class="questions">
+          <h4 id="number"></h4>
+          <h1 id="title"></h1>
+        </div>
+        <div class="answers" id="answers">
+          <button class="answer" data-num="-1">
+            <img src="images/disagree-strongly.svg" alt="Disagree strongly" />
+          </button>
+          <button class="answer" data-num="-0.5">
+            <img src="images/disagree.svg" alt="Disagree" />
+          </button>
+          <button class="answer" data-num="0">
+            <img src="images/neither.svg" alt="Neither agree nor disagree" />
+          </button>
+          <button class="answer" data-num="0.5">
+            <img src="images/agree.svg" alt="Agree" />
+          </button>
+          <button class="answer" data-num="1">
+            <img src="images/agree-strongly.svg" alt="Agree strongly" />
+          </button>
+        </div>
+      </div>
+      <div class="output">
+        <div class="dot" id="dot">
+          <img src="images/target.svg" alt="Target" />
+        </div>
+        <canvas class="chart" id="chart"></canvas>
+      </div>
+    </div>
+  </div>
+  <script src="js/chart.js"></script>
+  <script src="js/questions.js"></script>
+</body>
+</html>

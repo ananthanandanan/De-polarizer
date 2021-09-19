@@ -27,6 +27,14 @@ function App() {
           <Route exact path='/signup'>
             {user ? <Redirect to='/' /> : <Signup />}
           </Route>
+          <Route
+            exact
+            path="/survey"
+            component={() => {
+              window.location.href = "http://127.0.0.1:5500/political-compass/index.html";
+              return null;
+            }}
+          />
           <Route exact path='/chatroom/:random_user_id/:chatroom_id'>
             {user ? <Chatroom /> : <Signin />}
           </Route>
