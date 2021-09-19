@@ -141,7 +141,7 @@ function Chatroom() {
                     <div className="home-components">
                         <div className="chatroom">
                             <div className="chatroom-header">
-                                <div>Ananomous User</div>
+                                <div>Anonymous User</div>
                                 <div className="right-icons">
                                     <Countdown className="countdown" date={Date.now() + 1800000} onComplete={() => { deleteRoom() }} />
                                     {
