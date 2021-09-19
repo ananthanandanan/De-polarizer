@@ -67,13 +67,23 @@ ___
 <table>
      <tr>
           <td><img height="500" src="https://user-images.githubusercontent.com/53400471/133933539-ada6ea4a-6e0d-400e-ab20-fef9e48f7ffd.png" /><br /><center><b>Login Screen</b></center></td>
-          <td><img height="500" src="https://user-images.githubusercontent.com/53400471/133933620-cfcbbfaf-a602-4a42-817a-a76c136b2d7e.png" /><br /><center><b>Registration Screen</b></center></td>
      </tr>
 
 </table>
+
+<table>
+<tr>
+          <td><img height="500" src="https://user-images.githubusercontent.com/53400471/133933620-cfcbbfaf-a602-4a42-817a-a76c136b2d7e.png" /><br /><center><b>Registration Screen</b></center></td>
+</tr>
+</table>
+
 <table>
      <tr>
           <td><img height="500" src="https://user-images.githubusercontent.com/53400471/133933658-755da557-8c63-4375-bfd3-ab68e3423210.png" /><br /><center><b>Survey Screen</b></center></td>
+        </tr>
+</table>
+    <table>
+          <tr>
           <td><img height="500" src="https://user-images.githubusercontent.com/53400471/133933676-ddda8219-d696-46c5-8813-3f3cf6b01d2b.png" /><br /><center><b>Home Screen</b></center></td>
      </tr>
 
