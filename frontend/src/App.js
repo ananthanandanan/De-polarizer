@@ -27,7 +27,7 @@ function App() {
           <Route exact path='/signup'>
             {user ? <Redirect to='/' /> : <Signup />}
           </Route>
-          <Route exact path='/chatroom'>
+          <Route exact path='/chatroom/:random_user_id/:chatroom_id'>
             {user ? <Chatroom /> : <Signin />}
           </Route>
         </Switch>

@@ -5,15 +5,15 @@ import NewsArticle from "./NewsArticle";
 
 function News() {
   const [data, setData] = useState();
-  
+
   useEffect(() => {
     const refresh = async () => {
       try {
         await axios
           .get(
-            `https://newsapi.org/v2/everything?q=tesla&from=2021-08-18&sortBy=publishedAt&apiKey=8ff9d03d1adf4cb0bb610ba2e419a274`
+            "http://api.mediastack.com/v1/news?access_key=573ea93d458bc7656c9279808cda889e"
           )
-          .then((response) => setData(response.data))
+          .then((response) => setData(response.data.data))
           .catch((error) => console.log(error));
       } catch (error) {
         console.log(error)
@@ -26,7 +26,7 @@ function News() {
     <div className="news__container">
       <div className="all__news">
         {data
-          ? data.articles.map((news) => (
+          ? data.map((news) => (
             <NewsArticle data={news} key={news.url} />
           ))
           : "Loading"}

@@ -33,27 +33,35 @@ function NewsArticle({ data }) {
   const clickHandler = async (e) => {
     e.preventDefault()
     try {
-      do {
-        const random_user = allUsers[Math.floor(Math.random() * allUsers.length)];
-        setRandomUser(random_user)
-        if (random_user._id !== user._id) {
-          const api_data = {
-            senderId: user._id,
-            receiverId: random_user?._id
-          }
-          await axios.post(API_URL + 'api/chatrooms', api_data)
-          navigate("chatroom")
-          break
-        }
+      const chatroom_exist = await axios.get(API_URL + "api/chatrooms/" + user._id)
+      console.log(chatroom_exist.data)
+      if (chatroom_exist.data.length !== 0) {
+        const members = await chatroom_exist.data[0].members
+        console.log(members)
+        navigate(`chatroom/${members[1] !== user?._id ? members[1] : members[0]}/${chatroom_exist.data[0]._id}`)
       }
-      while (randomUser._id === user._id)
+      else {
+        do {
+          const random_user = allUsers[Math.floor(Math.random() * allUsers.length)];
+          setRandomUser(random_user)
+          if (random_user._id !== user._id) {
+            const api_data = {
+              senderId: user._id,
+              receiverId: random_user?._id
+            }
+            const response = await axios.post(API_URL + 'api/chatrooms', api_data)
+            navigate(`chatroom/${random_user._id}/${response.data._id}`)
+            break
+          }
+        }
+        while (randomUser._id === user._id)
+      }
 
     }
     catch (err) {
       console.log(err)
     }
   }
-
 
   return (
     <div className="news" onClick={(e) => clickHandler(e)}>
